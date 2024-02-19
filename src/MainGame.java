@@ -24,12 +24,12 @@ public class MainGame {
         }
     }
 
-    public void initGame() {
+    private void initGame() {
         System.out.println("Welcome to Tic Tac Toe Game!");
         currentBoard = new Board();
     }
 
-    public void newGame(){
+    private void newGame(){
         currentBoard.newGame();
         currentPlayer = Seed.CROSS;
         currentState = State.PLAYING;
@@ -53,10 +53,10 @@ public class MainGame {
         }
     }
 
-    public void playerMove(){
+    private void playerMove(){
         boolean correctInput = false;
-        int row = -1;
-        int col = -1;
+        int row;
+        int col;
 
         while(!correctInput) {
             String sign = currentPlayer.getSign();

@@ -7,7 +7,7 @@ public class Board {
         initGame();
     }
 
-    public void initGame() {
+    private void initGame() {
         board = new Cell[ROWS][COLS];
         for (int row = 0; row < ROWS; ++row) {
             for (int col = 0; col < COLS; ++col) {
@@ -36,14 +36,6 @@ public class Board {
             if (row < ROWS - 1) System.out.println("-----------");
         }
         System.out.print("\n");
-    }
-
-    public void setBoard(Cell[][] board) {
-        this.board = board;
-    }
-
-    public Cell[][] getBoard() {
-        return board;
     }
 
     public State gameStep(Seed player, int selectedRow, int selectedCol) {
